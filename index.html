@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Min Produktbilled Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📸 Produktbillede Generator</h1>
+    <p>Upload dine produkter, og få professionelle billeder – helt gratis!</p>
+  </header>
+
+  <main>
+    <section id="upload-section">
+      <input type="file" id="fileInput" multiple accept="image/*">
+    </section>
+
+    <section id="product-preview"></section>
+
+    <section id="result">
+      <canvas id="canvas" width="1200" height="600"></canvas>
+      <button id="downloadBtn">Download Samlet Billede</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Din Shop Navn</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.20.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix"></script>
+  <script src="script.js"></script>
+</body>
+</html>
