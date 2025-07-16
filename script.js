@@ -1,3 +1,4 @@
+const previewImg = document.getElementById("canvasPreview");
 const fileInput = document.getElementById("fileInput");
 const productPreview = document.getElementById("product-preview");
 const canvas = document.getElementById("canvas");
@@ -77,13 +78,14 @@ function drawOnCanvas(images) {
     ctx.drawImage(img, x, 40, itemWidth, itemHeight);
     ctx.restore();
   });
+
+  // Vis canvas preview som billede
+  previewImg.src = canvas.toDataURL("image/png");
 }
 
 downloadBtn.addEventListener("click", () => {
   const link = document.createElement("a");
-  canvas.toBlob(blob => {
-    link.href = URL.createObjectURL(blob);
-    link.download = "samlet-produktbillede.png";
-    link.click();
-  });
+  link.href = canvas.toDataURL("image/png");
+  link.download = "samlet-produktbillede.png";
+  link.click();
 });
