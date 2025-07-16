@@ -12,17 +12,19 @@
   </header>
 
   <main>
-    <section id="upload-section">
-      <input type="file" id="fileInput" multiple accept="image/*">
-    </section>
+  <section id="upload-section">
+    <input type="file" id="fileInput" multiple accept="image/*">
+  </section>
 
-    <section id="product-preview"></section>
+  <section id="product-preview"></section>
 
-    <section id="result">
-      <canvas id="canvas" width="1200" height="600"></canvas>
-      <button id="downloadBtn">Download Samlet Billede</button>
-    </section>
-  </main>
+  <section id="result">
+    <h2>Samlet preview:</h2>
+    <canvas id="canvas" width="1200" height="600" style="display:none;"></canvas>
+    <img id="canvasPreview" alt="Samlet billede preview" />
+    <button id="downloadBtn">Download Samlet Billede</button>
+  </section>
+</main>
 
   <footer>
     <p>© 2025 Din Shop Navn</p>
